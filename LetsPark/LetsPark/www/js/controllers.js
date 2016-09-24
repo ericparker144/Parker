@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngMap'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -39,6 +39,53 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+})
+
+.controller('MapController', function ($scope, $state) {
+
+    //NgMap.getMap().then(function (map) {
+    //    console.log(map.getCenter());
+    //    console.log('markers', map.markers);
+    //    console.log('shapes', map.shapes);
+    //});
+
+    //var map;
+    //angular.element(document).ready(function initMap() {
+    //    map = new google.maps.Map(document.getElementById('map'), {
+    //        center: { lat: -34.397, lng: 150.644 },
+    //        zoom: 10
+    //    });
+    //}
+    //)
+
+    //var options = { timeout: 10000, enableHighAccuracy: true };
+
+    //$cordovaGeolocation.getCurrentPosition(options).then(function (position) {
+
+    //    var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+    //    var mapOptions = {
+    //        center: latLng,
+    //        zoom: 15,
+    //        mapTypeId: google.maps.MapTypeId.ROADMAP
+    //    };
+
+    //    $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    //}, function (error) {
+    //    console.log("Could not get location");
+    //});
+
+    var latLng = new google.maps.LatLng(-34.397, 150.644);
+
+    var mapOptions = {
+        center: latLng,
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
 })
 
 .controller('PlaylistsCtrl', function($scope) {

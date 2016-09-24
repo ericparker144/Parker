@@ -1,0 +1,12 @@
+{
+  "name": "Let's Park",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "app_id": "fd66b643"
+}
