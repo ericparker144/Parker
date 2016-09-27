@@ -1,5 +1,5 @@
 {
-  "name": "Let's Park",
+  "name": "Ionic Sidemenu with Map",
   "gulpStartupTasks": [
     "sass",
     "watch"
